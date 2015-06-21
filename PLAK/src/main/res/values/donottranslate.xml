@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="facebook_app_id">143043732467979</string>
+    <string name="versi" translatable="false">Current version : %s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name" translatable="false">Plak</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="plak_set_hor_colnumkey">horizontal_col_num</string>
+    <string name="plak_set_ver_colnumkey">vertical_col_num</string>
+    <string name="plak_set_iconshadow">icon_shadow</string>
+    <string name="plak_set_iconsize">icon_size</string>
+    <string name="dim_40" translatable="false">40</string>
+    <string name="dim_50" translatable="false">50</string>
+    <string name="dim_60" translatable="false">60</string>
+
+    <string name="nilaiMin1" translatable="false">nilaiMin1</string>
+    <string name="nilaiMax1" translatable="false">nilaiMax1</string>
+    <string name="nilaiMin2" translatable="false">nilaiMin2</string>
+    <string name="nilaiMax2" translatable="false">nilaiMax2</string>
+    <string name="key_1" translatable="false">key_1</string>
+    <string name="key_2" translatable="false">key_2</string>
+    <string name="title_1" translatable="false">title_1</string>
+    <string name="title_2" translatable="false">title_2</string>
+    <string name="default_value_1" translatable="false">default_value_1</string>
+    <string name="default_value_2" translatable="false">default_value_2</string>
+    <string name="single">single</string>
+</resources>

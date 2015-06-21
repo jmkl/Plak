@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/merah"
+    android:textAllCaps="true"
+    android:textAppearance="@style/txtBesar.Putiah"
+    android:layout_margin="0dip"
+    android:gravity="center_horizontal"
+    android:textColor="@color/putiah"
+    android:text="@string/hello_world"
+    android:id="@android:id/title"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent" />

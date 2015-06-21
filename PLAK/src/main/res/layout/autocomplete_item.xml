@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/kotakmerah"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+
+        android:textColor="@color/putiah"
+        android:id="@android:id/text1"
+        android:text="@string/hello_world"
+        android:singleLine="true"
+        android:padding="@dimen/dimen10"
+        android:textAppearance="@style/txtKecil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

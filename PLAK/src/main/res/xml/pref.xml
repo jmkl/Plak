@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dcsms="http://schemas.android.com/apk/res-auto"
+    android:orderingFromXml="true"
+    android:title="Hello">
+
+    <PreferenceCategory
+
+        android:title="MiHome"
+        android:layout="@layout/prefcat">
+        <CheckBoxPreference
+            android:layout="@layout/cbpref"
+            android:key="mod_mihome_enabler"
+            android:summary="@string/mod_mihome_enabler_sum"
+            android:title="@string/mod_mihome_enable_str" />
+
+        <!--<ListPreference-->
+        <!--android:dependency="mod_mihome_enabler"-->
+        <!--android:layout="@layout/pref"-->
+        <!--android:defaultValue="4"-->
+        <!--android:entries="@array/mihome_col_num_val"-->
+        <!--android:entryValues="@array/mihome_col_num_valentry"-->
+        <!--android:key="@string/plak_set_hor_colnumkey"-->
+        <!--android:title="@string/pref_ic_count_horizontal" />-->
+
+        <hello.dcsms.plak.prefscreen.WheelPrefs
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/wheelprefs"
+            dcsms:nilaiMin1="3"
+            dcsms:nilaiMax1="15"
+            dcsms:nilaiMin2="3"
+            dcsms:nilaiMax2="15"
+            dcsms:default_value_1="4"
+            dcsms:default_value_2="5"
+            dcsms:key_1="@string/plak_set_hor_colnumkey"
+            dcsms:key_2="@string/plak_set_ver_colnumkey"
+            dcsms:title_1="Horizontal Column"
+            dcsms:title_2="Vertical Column"
+            android:title="Icon Column Count"
+            android:summary="Tes Wheel" />
+
+        <!--<ListPreference-->
+        <!--android:dependency="mod_mihome_enabler"-->
+        <!--android:layout="@layout/pref"-->
+        <!--android:defaultValue="5"-->
+        <!--android:title="@string/pref_ic_count_vert"-->
+        <!--android:entryValues="@array/mihome_col_num_valentry"-->
+        <!--android:entries="@array/mihome_col_num_val"-->
+        <!--android:key="@string/plak_set_ver_colnumkey" />-->
+
+        <CheckBoxPreference
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/cbpref"
+            android:summaryOn="@string/pref_ic_shadow_sum_show"
+            android:summaryOff="@string/pref_ic_shadow_sum_hide"
+            android:defaultValue="false"
+            android:key="@string/plak_set_iconshadow"
+            android:title="@string/pref_ic_shadow" />
+
+
+        <hello.dcsms.plak.prefscreen.WheelPrefs
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/wheelprefs"
+            dcsms:single="true"
+            dcsms:nilaiMin1="30"
+            dcsms:nilaiMax1="120"
+            dcsms:default_value_1="60"
+            dcsms:key_1="icon_size"
+            dcsms:title_1="Icon size"
+            android:title="@string/pref_ic_size" />
+        <hello.dcsms.plak.prefscreen.WheelPrefs
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/wheelprefs"
+            dcsms:nilaiMin1="30"
+            dcsms:nilaiMax1="150"
+            dcsms:nilaiMin2="30"
+            dcsms:nilaiMax2="150"
+            dcsms:default_value_1="70"
+            dcsms:default_value_2="76"
+            dcsms:key_1="ws_width"
+            dcsms:key_2="ws_height"
+            dcsms:title_1="Workspace Icon Width"
+            dcsms:title_2="WorkSpace Icon Height"
+            android:title="Workspace Icon Dimension"
+            android:summary="Shit" />
+        <!--<ListPreference-->
+        <!--android:dependency="mod_mihome_enabler"-->
+        <!--android:layout="@layout/pref"-->
+        <!--android:defaultValue="60"-->
+        <!--android:title="@string/pref_ic_size"-->
+        <!--android:key="icon_size"-->
+        <!--android:entryValues="@array/mihome_icon_size_val"-->
+        <!--android:entries="@array/mihome_icon_size_ent" />-->
+
+        <CheckBoxPreference
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/cbpref"
+            android:summaryOn="@string/pref_ic_text_sum_show"
+            android:summaryOff="@string/pref_ic_text_sum_hide"
+            android:defaultValue="false"
+            android:key="icon_launcher_text"
+            android:title="@string/pref_ic_text" />
+
+        <hello.dcsms.plak.prefscreen.WheelPrefs
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/wheelprefs"
+            dcsms:single="true"
+            dcsms:nilaiMin1="5"
+            dcsms:nilaiMax1="20"
+            dcsms:default_value_1="8"
+            dcsms:key_1="icon_text_size"
+            dcsms:title_1="IconText size"
+            android:title="@string/pref_ic_text_size" />
+        <!--<ListPreference-->
+        <!--android:dependency="mod_mihome_enabler"-->
+        <!--android:layout="@layout/pref"-->
+        <!--android:entryValues="@array/mihome_icon_text_size_val"-->
+        <!--android:entries="@array/mihome_icon_text_size_ent"-->
+        <!--android:key="icon_text_size"-->
+        <!--android:defaultValue="7"-->
+        <!--android:title="@string/pref_ic_text_size" />-->
+
+        <CheckBoxPreference
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="tampilkan_hotseat"
+            android:title="@string/show_hide_hotseat"
+            android:summaryOn="@string/hotseat_sum_on"
+            android:summaryOff="@string/hotseat_sum_off" />
+
+        <CheckBoxPreference
+            android:dependency="mod_mihome_enabler"
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="keep_in_memory"
+            android:title="Keep MiHome in Memory"
+            android:summary="This part was comotan XPosed AppSettings Module" />
+
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="SystemUI"
+        android:layout="@layout/prefcat">
+        <CheckBoxPreference
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="mod_system_ui"
+            android:title="@string/pref_sb_layout"
+            android:summary="@string/mod_sys_ui_sum" />
+        <CheckBoxPreference
+            android:dependency="pref_sh_jam"
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="enable_custom_format_jam"
+            android:title="@string/enable_custom_jam"
+            android:summary="@string/en_custom_clock_format" />
+
+        <Preference
+            android:dependency="enable_custom_format_jam"
+            android:layout="@layout/pref"
+            android:key="pref_edit_jam"
+            android:summary="@string/clock_editor_sum"
+            android:title="@string/str_clock_editor" />
+
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="switch_batt_icon_n_text"
+            android:title="@string/pref_switch_batt"
+            android:summary="@string/switch_batt_ic" />
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="pref_sh_jam"
+            android:title="@string/pref_sh_jam_str" />
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="pref_sh_sinyal"
+            android:title="@string/pref_sh_sinyal_str" />
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="pref_sh_notif"
+            android:title="@string/pref_sh_icnotif_str" />
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="pref_sh_icon"
+            android:title="@string/pref_sh_statusicon_str" />
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="pref_sh_battery"
+            android:title="@string/pref_sh_batt_str" />
+
+        <hello.dcsms.plak.prefscreen.DialogPrefs
+            android:dependency="mod_system_ui"
+            android:layout="@layout/pref"
+            android:key="pref_mobile_icon"
+            android:title="Mobile Icon Order"
+            android:summary="This Viewgroup contain of signal icon, inout icon, signal type and carrier lable" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/wifi_order_entry"
+            android:entryValues="@array/wifi_order_value"
+            android:dependency="mod_system_ui"
+            android:layout="@layout/pref"
+            android:title="@string/pref_wifi_icon_title"
+            android:key="pref_wifi_icon"
+            android:summary="Switch WiFi between left/right of Simcard (1) signal icons" />
+
+        <CheckBoxPreference
+            android:dependency="mod_system_ui"
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="pref_sim_order"
+            android:title="Reorder Simcard 1 n Simcard 2"
+            android:summary=" (Dual SIM Only) This option allow you to change the order of signal icon" />
+        <hello.dcsms.plak.prefscreen.WheelPrefs
+            android:dependency="mod_system_ui"
+            android:layout="@layout/wheelprefs"
+            dcsms:single="true"
+            dcsms:nilaiMin1="0"
+            dcsms:nilaiMax1="5"
+            dcsms:default_value_1="2"
+            dcsms:key_1="max_notif_num"
+            dcsms:title_1="Max Notification icon"
+            android:title="Max Notification icon"
+            android:summary="Maximum number of notification icon that appear on statusbar (workaround for overlapping icon)"/>
+        <CheckBoxPreference
+
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="enable_custom_carrier"
+            android:title="Enable custom carrier"
+            android:summary="what the hell" />
+
+        <Preference
+            android:dependency="enable_custom_carrier"
+            android:layout="@layout/pref"
+            android:key="pref_edit_carrier"
+            android:summary="all about carrier"
+            android:title="Carrier editor panel" />
+
+
+<!--    <MultiSelectListPreference
+        android:layout="@layout/pref"
+        android:title="Statubar on expanded icons"
+        android:summary="Show/hide Configuration for statusbar in expanded view"
+        android:key="prefs_sb_expanded_view"
+        android:defaultValue="@array/xpanded_view_entryValues"
+        android:entries="@array/xpanded_view_entries"
+        android:entryValues="@array/xpanded_view_entryValues"
+    />-->
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Manual"
+        android:layout="@layout/prefcat">
+        <CheckBoxPreference
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="manual_conf"
+            android:title="@string/manual_conf"
+            android:summary="@string/man_conf_sum" />
+
+        <Preference
+            android:title="@string/manual_config_setting"
+            android:key="manual_conf_setting"
+            android:layout="@layout/pref"
+            android:dependency="manual_conf" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Extended Feature"
+        android:layout="@layout/prefcat">
+        <CheckBoxPreference
+            android:layout="@layout/cbpref"
+            android:defaultValue="false"
+            android:key="customize_ss"
+            android:title="Enable Screenshot Frame"
+            android:summary="This option clone screenshot runtime and modify it"/>
+        <CheckBoxPreference
+            android:dependency="customize_ss"
+            android:layout="@layout/cbpref"
+            android:defaultValue="true"
+            android:key="ss_notif_ori"
+            android:title="Disable original screenshot notification" />
+        <Preference
+            android:dependency="customize_ss"
+            android:fragment="hello.dcsms.plak.Frgmnt.SSFragment"
+            android:title="ScreenShoot Frame Settings"
+            android:key="screenshot_ov"
+            android:layout="@layout/pref" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/intent_share"
+            android:entryValues="@array/intent_share_value"
+            android:dependency="customize_ss"
+            android:layout="@layout/pref"
+            android:title="Notification tap behavior"
+            android:key="pref_intent"
+            android:summary="What to do when you tap notification/headup " />
+        <hello.dcsms.plak.prefscreen.KeyPrefs
+            android:layout="@layout/pref"
+            android:key="disable_nag"
+            android:title="Disable Popup Dialog"
+            android:summary="Disable nagging" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,219 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="css/hello.css" type="text/css"/>
+</style>
+</head>
+<body>
+	<img width="220px" src="logo.png">
+
+	<h2 style="position: relative; margin: auto 0;">MIUI V6 Module for
+		WSM/Xposed</h2>
+		<h3>[versi 1.6]</h3>
+	<h5>ChangeLog</h5>
+	<ol>
+		<li>Fix Error Send Log</li>
+		<li>Fix anu jam hilang sesudah apply Tema (mungkin ya)</li>
+		<li>Menambahkan menu enable/disable Mod Mihome</li>
+		<li>dll</li>
+
+	</ol>
+	<h3>[versi 1.5]</h3>
+	<h5>ChangeLog</h5>
+	<ol>
+		<li>Menambahkan custom format jam + Available free memory</li>
+		<li>Menambahkan menu <a href="#CUSTOMMENU">MANUAL CUSTOM SETTINGS</a></li>
+		<li>Menambahkan menu SEND LOG pada Navigation Drawer</li>
+		<li>Menambahkan menu hide & show view di statusbar</li>
+
+	</ol>
+	<h3>[versi 1.4]</h3>
+	<h5>ChangeLog</h5>
+	<ol>
+		<li>Menambahkan fitur auto save statusbar layout setup</li>
+		<li>fix bugs layout anu abis apply theme</li>
+	</ol>
+	<h3>[versi 1.3]</h3>
+	<h5>
+		ChangeLog
+		</h2>
+		<ol>
+			<li>Nambahin anuin statusbar</li>
+			<li>Pada menu pengaturan Layout Statusbar, akan ditemukan
+				beberapa buah View.
+				<ul>
+					<li><b>baterai</b> : icon & teks baterai</li>
+					<li><b>jam</b> : jam</li>
+					<li><b>icon</b> : notification icon (sms,phone,3rd party apps
+						notification, etc)</li>
+					<li><b>stat</b> icon : status icon (system status icon i.e:
+						alarm,silentmode icon,etc)</li>
+					<li><b>trafik</b> : network speed indicator (muncli jika di
+						aktifkan di MIUI setting)</li>
+					<li><b>sinyal</b> : icon sinyal, sinyal in out, wifi dll</li>
+					<li><b>APPLY</b> : tombol untuk apply (semua view di atas
+						harus di drag keselurannya terlebih dahliu, baru bisa di apply)</li>
+				</ul> Silahkan Tahan lama-lama pada View tersebut dan drag ke area <b>DROP</b>.
+				Area <b>DROP</b> ini terdiri dari 3 wilayah utama yaitu <b>KIRI-TENGAH-KANAN</b>.
+				urutan view akan disesuaikan dengan urutan mana yang di <b>DROP</b>
+				duluan. Untuk wilayah <b>TENGAH</b>, hanya diperbolehkan mendrop 1
+				View. sementara area <b>KIRI</b> dan <b>KANAN</b> diperbolehkan
+				mendrop view tanpa batasan
+			</li>
+			<li>aktifkan <b>AUTOSTART</b> utk Applikasi <b>PLAK</b> pada
+				applikasi <b>SECURITY</b> untuk menerapkan layout Statusbar pada
+				saat <b>REBOOT</b> (comprende?)
+			</li>
+			<li>Modifikasinya tak anuin ke dalam RelativeLayout, yang mana
+				beliau ini tidak menghiraukan persinggungan antara item2 yang berada
+				pada pangkuannya. Jadi, waspadalah terhadap persinggungan ikon
+				mungkin saja terjadi jika tidak teliti dalam mengatur layoutnya.</li>
+		</ol>
+		<br /> <br />
+		<h3>[versi 1.2]</h3>
+		<h5>ChangeLog</h5>
+		<ol>
+			<li>Menambahkan fitur ukuran teks *anuin teks biar</li>
+			<li>anu per ukuran ikon</li>
+		</ol>
+
+		<h3>PERTANYAAN YANG SERING DITANYAKAN</h3>
+		<ul>
+			<li>apa ini?</li>
+			<li>ini modul untuk xposed/WSM<br />NB : setelah kita coba2
+				ternyata modul ini bekerja baik di WSM 2.3.4 ( WSM itu modifikasi
+				dari xposed supaya jalan sempurna di MIUI. Pada dasarnya API( baca:
+				XposedBridgeApi-xx.jar ) yg digunakan untuk modul xposed/WSM adalah
+				sama(mungkin). Jika modul bekerja menggunakan Xposed pada MIUI
+				kemungkinan besar akan bekerja pula di WSM. Begitulah kira2. CMIIW )
+			</li>
+		</ul>
+		<ul>
+			<li>xposed itu apa?</li>
+			<li>google dengan keyword "Xposed"</li>
+		</ul>
+		<ul>
+			<li>modul ini buat apa?</li>
+			<li>buat anuin SystemUI dan Launcher MIUI v6</li>
+		</ul>
+		<div id="CUSTOMMENU">
+			<h3>MANUAL CUSTOM SETTINGS</h3>
+			<p>
+				mengingat kebutuhan setiap manusia itu berbeda2, maka dengan itu,
+				kita memanfaatkan fungsi dasar dari API xposed yaitu <i>resparam.res.setReplacement(....)</i>
+				yang mana fungsi ini dapat dengan langsung mengintervensi value
+				boolean, color, integer, dimen (jika kamu akrab sekali dengan grepe2
+				apk). MANUAL CUSTOM SETTINGS, untuk sementara dibatasi hanya untuk
+				paket com.android.systemui & com.miui.home saja.
+				
+
+			<ul>
+				<li>untuk value boolean, pada manual config settings, di isikan
+					1 jika nilainya true atau 0 jika nilainya false</li>
+				<li>untuk value color, diisikan dengan format i.e : #FFFFFFFF</li>
+				<li>untuk value integer, disikan dengan format angka</li>
+				<li>untuk value dimen, (mengingat dimen harus di anuin lewat anu) di isikan dengan angka antara 0-500</li>
+				<li>untuk value string, disikan dengan huruf </li>
+			</ul>
+			</p> Oleh sebab fungsi custom ini sangat tak terbatas, maka akan sulit sekali
+			untuk mengiringi value defaultnya. maka dari itu, untuk menonaktifkan kembali fitur ini,
+			harus melakukan REBOOT terlebih dahulu setelah sebelumnya menonaktifkan menunya pada apps PLAK
+			<p>
+			</p>
+		</div>
+		<table style="border: solid 2px #ffffff;">
+			<tbody>DONATION
+			</tbody>
+			<tr>
+				<td>please inject</td>
+				<td>:</td>
+				<td>+6289647075271</td>
+			</tr>
+			<tr>
+				<td>thanks</td>
+			</tr>
+			<tr>
+				<td>best regard</td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td>jmkl</td>
+			</tr>
+		</table>
+
+		<!-- <p> -->
+		<!-- <br/> -->
+		<!-- <h3>Plak License</h3> -->
+
+		<!-- 		<h4>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE</h4> -->
+		<!-- 			<h5>	Version 2, December 2004</h5> -->
+		<!-- <h5> -->
+		<!-- Copyright (c) 2015 jmkl -->
+		<!-- </h5> -->
+		<!-- <p> -->
+		<!-- Everyone is permitted to copy and distribute verbatim or modified -->
+		<!-- copies of this license document, and changing it is allowed as long -->
+		<!-- as the name is changed. -->
+		<!-- </p> -->
+		<!-- 		<h4>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE</h4> -->
+		<!-- <h4>TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION</h4> -->
+		<!-- <p> -->
+		<!-- 0. You just DO WHAT THE FUCK YOU WANT TO. -->
+		<!-- </p> -->
+
+		<!-- <h3>XPosed License</h3> -->
+		<!-- <p> -->
+		<!-- Copyright 2013 rovo89, Tungstwenty -->
+		<!-- <br/><br/> -->
+		<!-- Licensed under the Apache License, Version 2.0 (the "License"); -->
+		<!-- you may not use this file except in compliance with the License. -->
+		<!-- You may obtain a copy of the License at -->
+		<!-- <br/><br/> -->
+		<!-- http://www.apache.org/licenses/LICENSE-2.0 -->
+		<!-- <br/><br/> -->
+		<!-- Unless required by applicable law or agreed to in writing, software -->
+		<!-- distributed under the License is distributed on an "AS IS" BASIS, -->
+		<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. -->
+		<!-- See the License for the specific language governing permissions and -->
+		<!-- limitations under the License. -->
+
+		<!-- </p> -->
+		<!-- <h3>SwipeListView License</h3> -->
+		<!-- <p> -->
+		<!-- The MIT License (MIT) -->
+		<!-- <br/><br/> -->
+		<!-- Copyright (c) 2014 baoyongzhang -->
+		<!-- <br/><br/> -->
+		<!-- Permission is hereby granted, free of charge, to any person obtaining a copy -->
+		<!-- of this software and associated documentation files (the "Software"), to deal -->
+		<!-- in the Software without restriction, including without limitation the rights -->
+		<!-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell -->
+		<!-- copies of the Software, and to permit persons to whom the Software is -->
+		<!-- furnished to do so, subject to the following conditions: -->
+		<!-- <br/><br/> -->
+		<!-- The above copyright notice and this permission notice shall be included in all -->
+		<!-- copies or substantial portions of the Software. -->
+		<!-- <br/><br/> -->
+		<!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR -->
+		<!-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, -->
+		<!-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE -->
+		<!-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER -->
+		<!-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, -->
+		<!-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE -->
+		<!-- SOFTWARE. -->
+		<!-- </p> -->
+</body>
+
+
+</html>

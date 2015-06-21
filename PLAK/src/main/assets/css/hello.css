@@ -1,0 +1,39 @@
+* {
+	font-family: sans-serif;
+	background: #00FFFFFF;
+	color: #fff;
+}
+.share{
+	font-family:'FontAwesome';
+	
+}
+.share a{
+	padding: 10px;
+}
+
+body {
+	padding: 20px;
+}
+
+ol li {
+	padding-left: 4px;
+	margin-left: 10px;
+}
+
+h3 h5 {
+	font-weight: bolder;
+}
+
+h5 {
+	font-style: italic;
+}
+a{
+	text-decoration: none;
+	color: #ffdd00;
+	font-weight: bolder;
+}
+textarea {
+	outline:none;
+	border: solid 1px #00ffdd00;
+	color: #00ffdd00;
+}

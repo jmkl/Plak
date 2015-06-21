@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/imporfile"
+        android:title="IMPORT CONFIG">
+    </item>
+    <group android:id="@+id/grupmanual" >
+        <item
+            android:id="@+id/manual_add_dimen"
+            android:title="@string/man_add_dimen"/>
+        <item
+            android:id="@+id/manual_add_string"
+            android:title="@string/man_add_string"/>
+        <item
+            android:id="@+id/manual_add_integer"
+            android:title="@string/man_add_integer"/>
+        <item
+            android:id="@+id/manual_add_boolean"
+            android:title="@string/man_add_bool">
+        </item>
+        <item
+            android:id="@+id/manual_add_color"
+            android:title="@string/man_add_color">
+        </item>
+    </group>
+
+    <item
+        android:actionViewClass="android.widget.SearchView"
+        android:icon="@android:drawable/ic_menu_search"
+        android:id="@+id/action_filter"
+        android:title="Filter List"
+        android:orderInCategory="1"
+        android:showAsAction="always|collapseActionView"/>
+
+
+
+</menu>

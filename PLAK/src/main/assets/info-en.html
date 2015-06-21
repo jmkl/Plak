@@ -1,0 +1,268 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/hello.css" type="text/css"/>
+    <link rel="stylesheet" href="css/fa.css" type="text/css"/>
+
+</head>
+<body>
+
+
+<h5>share and like our facebook pages which is u can find/request new feature or reporting bugs </h5><br/>
+
+<div class="share">
+    <a class="fa fa-facebook fa-2x"
+       href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/helloplak"></a>
+    <a class="fa fa-twitter fa-2x"
+       href="https://twitter.com/home?status=https://www.facebook.com/helloplak"></a>
+    <a class="fa fa-google-plus fa-2x"
+       href="https://plus.google.com/share?url=https://www.facebook.com/helloplak"></a>
+    <a class="fa fa-pinterest fa-2x"
+       href="https://pinterest.com/pin/create/button/?url=PLAK!&media=https://www.facebook.com/helloplak&description=MIUI%20V6%20WSM%20Module"></a>
+</div>
+<img width="220px" src="logo.png">
+
+<h2 style="position: relative; margin: auto 0;">MIUI V6 Module for WSM/Xposed</h2>
+
+<h3>FAQ</h3>
+<ul>
+    <li>What is it?</li>
+    <li>This is WSM Manager Module for MIUI V6.</li>
+</ul>
+<ul>
+    <li>What is WSM Manager?</li>
+    <li>WSM Manager is modified version of XPosed that work on MIUI</li>
+</ul>
+<ul>
+    <li>What this module can do?</li>
+    <li>This module simply help you modify your SystemUI and MiHome
+        Runtime (skip de/recompiling apk long job and very frustating)
+    </li>
+</ul>
+<h3>[versi 1.9]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Add Notification limit option (to prevent overlapping icon )</li>
+    <li>Add auto Screenshot Mockup</li>
+    <li>Add Disable PopUp Option </li>
+</ol>
+<h3>[versi 1.8]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Remodifying option for better user experience</li>
+    <li>Add signal icon order option</li>
+    <li>Add WiFi icon order option</li>
+    <li>Add Sim1&Sim2 icon order option</li>
+</ol>
+
+<h3>[versi 1.7]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Adding <sup>Superscript</sup> & <sub>Subscript</sub> tag on Clock format</li>
+    <li>Fix some bugs</li>
+
+</ol>
+
+<h3>[versi 1.6]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Fix Error Send Log</li>
+    <li>Fix Statusbar clock missing after applying theme</li>
+    <li>Add Mihome Mod disable/enable menu</li>
+    <li>etc</li>
+
+</ol>
+<h3>[versi 1.5]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Add Custom format clock base on Simpledateformat+ Available
+        free memory
+    </li>
+    <li>Add <a href="#CUSTOMMENU">MANUAL CUSTOM SETTINGS</a></li>
+    <li>Add SEND LOG menu on Navigation Drawer</li>
+    <li>Add show/hide menu for item in statusbar</li>
+
+</ol>
+<h3>[versi 1.4]</h3>
+<h5>ChangeLog</h5>
+<ol>
+    <li>Add statusbar layout autosave</li>
+    <li>Fix bugs clock</li>
+</ol>
+<h3>[versi 1.3]</h3>
+<h5>
+    ChangeLog
+    </h5>
+    <ol>
+        <li>Add StatubarLayout Mod</li>
+    </ol>
+    <br/> <br/>
+
+    <h3>[versi 1.2]</h3>
+    <h5>ChangeLog</h5>
+    <ol>
+        <li>Add text size menu</li>
+        <li>Automatic text width base on icon width</li>
+    </ol>
+
+    <div id="CUSTOMMENU">
+        <h3>MANUAL CUSTOM SETTINGS</h3>
+
+        <p>
+            There ir basic feature that XposedBridge API offer that can
+            interfere Application value such as <i>boolean, string, color,
+            integer ,etc</i> which called <i><b>resparam.res.setReplacement(...)</b>
+            (for more info, please read Xposed wiki pages)</i>. with this MANUAL
+            CUSTOM SETTINGS, you allow to modify string, boolean, color, integer
+            and dimen. For now this feature only work for com.miui.home &
+            com.android.systemui package .
+        <ul>
+            <li>boolean; 0=false 1=true</li>
+            <li>color; #FFFFFFFF</li>
+            <li>integer; any numbers format</li>
+            <li>dimen; numbers between 0-500</li>
+            <li>string; any chars</li>
+        </ul>
+
+
+        <p>if u want manually create config file. You write this json
+            format like below and save it as filename.plakconf. And then you can
+            import it from Manual Config Menu/Import Settings</p>
+
+        <textarea rows="30" cols="100">
+
+            {
+            "data": [
+            {
+            "key": "com.android.systemui",
+            "data": []
+            },
+            {
+            "key": "com.miui.home",
+            "data": [
+            {
+            "tipe": "dimen",
+            "nilai": "100",
+            "objek": "hotseats_height",
+            "catatan": "hotseat height"
+            },
+            {
+            "tipe": "dimen",
+            "nilai": "90",
+            "objek": "workspace_indicator_margin_bottom",
+            "catatan": "indicator distance from bottom"
+            }
+            ]
+            }
+            ]
+            }
+
+        </textarea>
+        <br/>
+    </div>
+    <!--<table style="border: solid 2px #ffffff;">-->
+        <!--<tbody>DONATION-->
+        <!--</tbody>-->
+        <!--<tr>-->
+            <!--<td>please inject</td>-->
+            <!--<td>:</td>-->
+            <!--<td>+6289647075271</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>or contact</td>-->
+            <!--<td>:</td>-->
+            <!--<td>facebook.com/jimikill666</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>thanks</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>best regard</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>jmkl</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+
+    <!-- <p> -->
+    <!-- <br/> -->
+    <!-- <h3>Plak License</h3> -->
+
+    <!-- 		<h4>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE</h4> -->
+    <!-- 			<h5>	Version 2, December 2004</h5> -->
+    <!-- <h5> -->
+    <!-- Copyright (c) 2015 jmkl -->
+    <!-- </h5> -->
+    <!-- <p> -->
+    <!-- Everyone is permitted to copy and distribute verbatim or modified -->
+    <!-- copies of this license document, and changing it is allowed as long -->
+    <!-- as the name is changed. -->
+    <!-- </p> -->
+    <!-- 		<h4>DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE</h4> -->
+    <!-- <h4>TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION</h4> -->
+    <!-- <p> -->
+    <!-- 0. You just DO WHAT THE FUCK YOU WANT TO. -->
+    <!-- </p> -->
+
+    <!-- <h3>XPosed License</h3> -->
+    <!-- <p> -->
+    <!-- Copyright 2013 rovo89, Tungstwenty -->
+    <!-- <br/><br/> -->
+    <!-- Licensed under the Apache License, Version 2.0 (the "License"); -->
+    <!-- you may not use this file except in compliance with the License. -->
+    <!-- You may obtain a copy of the License at -->
+    <!-- <br/><br/> -->
+    <!-- http://www.apache.org/licenses/LICENSE-2.0 -->
+    <!-- <br/><br/> -->
+    <!-- Unless required by applicable law or agreed to in writing, software -->
+    <!-- distributed under the License is distributed on an "AS IS" BASIS, -->
+    <!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. -->
+    <!-- See the License for the specific language governing permissions and -->
+    <!-- limitations under the License. -->
+
+    <!-- </p> -->
+    <!-- <h3>SwipeListView License</h3> -->
+    <!-- <p> -->
+    <!-- The MIT License (MIT) -->
+    <!-- <br/><br/> -->
+    <!-- Copyright (c) 2014 baoyongzhang -->
+    <!-- <br/><br/> -->
+    <!-- Permission is hereby granted, free of charge, to any person obtaining a copy -->
+    <!-- of this software and associated documentation files (the "Software"), to deal -->
+    <!-- in the Software without restriction, including without limitation the rights -->
+    <!-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell -->
+    <!-- copies of the Software, and to permit persons to whom the Software is -->
+    <!-- furnished to do so, subject to the following conditions: -->
+    <!-- <br/><br/> -->
+    <!-- The above copyright notice and this permission notice shall be included in all -->
+    <!-- copies or substantial portions of the Software. -->
+    <!-- <br/><br/> -->
+    <!-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR -->
+    <!-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, -->
+    <!-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE -->
+    <!-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER -->
+    <!-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, -->
+    <!-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE -->
+    <!-- SOFTWARE. -->
+    <!-- </p> -->
+</body>
+
+
+</html>

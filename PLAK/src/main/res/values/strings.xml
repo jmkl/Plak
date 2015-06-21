@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string  translatable="false" name="readable_versi">2.3</string>
+
+    <string name="transition_menu">transition:MENU</string>
+
+    <string name="am_id" translatable="false">ca-app-pub-2105889541246924/3142665497</string>
+    <string name="desc_pendek">WSM Module for Mihome n MIUI V6 Statusbar</string>
+    <string name="desc_panjang">WSM Module for Mihome n MIUI V6 Statusbar</string>
+    <string name="pref_ic_count_horizontal">Horizontal Icon Count</string>
+    <string name="pref_ic_count_vert">Vertical Icon Count</string>
+    <string name="pref_ic_shadow">Icon Shadow</string>
+    <string name="pref_ic_size">Icon Size</string>
+    <string name="pref_ic_text">Icon Text</string>
+    <string name="pref_ic_text_size">Icon Text Size</string>
+    <string name="pref_sb_layout">Statusbar Layout Modification</string>
+    <string name="pref_ic_shadow_sum_show">Show Icon Shadow</string>
+    <string name="pref_ic_shadow_sum_hide">Hide Icon Shadow</string>
+    <string name="pref_ic_text_sum_show">Show Icon Text</string>
+    <string name="pref_ic_text_sum_hide">Hide Icon Text</string>
+    <string name="pref_sb_mod_active">Statusbar Layout Mod is Activate</string>
+    <string name="pref_sb_mod_inactive">Statusbar Layout Mod is Inactive</string>
+    <string name="nav_menu_setting">COMMON SETTINGS</string>
+    <string name="nav_menu_sb">STATUSBAR LAYOUT SETTINGS</string>
+    <string name="nav_menu_help">ABOUT</string>
+    <string name="nav_menu_log">GET LOGCAT</string>
+    <string name="ket_sb_layout">\'saved in\' EEEE, dd MMM yyyy \'at\' HH:mm</string>
+    <string name="header_info">For those who believe awesomeness are unlimited &amp; every individual element of universe are involve on it</string>
+    <string name="show_hide_hotseat">Show or hide Hotseat</string>
+    <string name="hotseat_sum_on">HotSeat is visible</string>
+    <string name="hotseat_sum_off">Hotseat is hiding somewhere (be sure to move all icon in hotseat into workspace before switch of this shit)</string>
+    <string name="manual_conf">Enable Manual Setting</string>
+    <string name="manual_config_setting">Manual Config Settings</string>
+    <string name="man_add_dimen">Add dimen</string>
+    <string name="man_add_string">Add String</string>
+    <string name="man_add_integer">Add Integer</string>
+    <string name="man_dial_title">Manual Add Title</string>
+    <string name="man_add_item">Item name</string>
+    <string name="man_add_val">Item value</string>
+    <string name="man_add_apply">APPLY</string>
+    <string name="cm_edit">Edit</string>
+    <string name="cm_delete">Delete</string>
+    <string name="man_add_desc">Item Description</string>
+    <string name="man_add_bool">Add Boolean</string>
+    <string name="man_add_color">AddColor</string>
+    <string name="switch_batt_ic">Switch battery and Icon Order LTR/RTL</string>
+    <string name="pref_switch_batt">Battery Icon &amp; Text Order</string>
+    <string name="pref_sh_jam_str">Show or hide clock</string>
+    <string name="pref_sh_sinyal_str">Show or hide signal icon</string>
+    <string name="pref_sh_icnotif_str">Show or hide notification icon</string>
+    <string name="pref_sh_statusicon_str">Show or hide status icon</string>
+    <string name="pref_sh_batt_str">Show or hide battery</string>
+    <string name="str_clock_editor">Clock Editor</string>
+    <string name="clock_editor_sum">You can configure your statusbar Clock format with it</string>
+    <string name="enable_custom_jam">En(dis)able Custom clock format</string>
+    <string name="en_custom_clock_format">By enabling this option, u have free way to set your clock format base on Simpledateformat</string>
+    <string name="thankyoumate" translatable="false">"
+        Hello,
+        
+        if you do like this apps?, 
+        please consider do some donation
+
+        +6289647075271
+        jimikill3d@gmail.com
+        	
+        	
+        thanks
+        /jmkl        
+        "</string>
+    <string name="man_conf_sum">Before enabling this, please read ABOUT section on the navigation menu</string>
+    <string name="mod_mihome_enable_str" translatable="false">Mod Mihome</string>
+    <string name="mod_mihome_enabler_sum">Enable or disable mod mihome. reboot after change to feels it</string>
+    <string name="mod_sys_ui_sum">Enable or disable SystemUI mod. Require reboot</string>
+    <string name="root_info">Seems like u dont give or have root permission. We need to access root for capture some log.</string>
+    <string name="pref_wifi_icon_title">Wifi icon position</string>
+    <string name="cyper_key" translatable="false">1200-1522-2585-5852-5852-2585</string>
+    <string name="screenrecord_notif_ticker">Screen is being recorded</string>
+    <string name="screenrecord_notif_title">Recording screen</string>
+    <string name="screenrecord_notif_stop">Stop</string>
+    <string name="screenrecord_notif_pointer">Toggle pointer</string>
+    <string name="screenrecord_toast_error">Unable to record screen</string>
+    <string name="screenrecord_toast_processing">Cannot start new recording as previous recording is still being processed</string>
+    <string name="screenrecord_toast_saved">Recording saved as %s</string>
+    <string name="screenrecord_toast_save_error">Unable to save recording to output file</string>
+    <string name="action_screenrecord">Screen record</string>
+    <string name="changelog">"
+ Current Version : %d
+    Changelog :
+        [1]: Fix statusbar bugs per MIUI OTA Update 5.5.22
+
+"</string>
+
+</resources>

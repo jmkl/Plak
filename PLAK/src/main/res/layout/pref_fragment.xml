@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="?android:actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pref_mainroot"
+    android:background="@color/merah"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <ListView
+        android:background="@color/putiah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/ll_tombol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/merah"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <hello.dcsms.plak.widget.CustomButton
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/apply_statusbar_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/putiah"
+            android:text="APPLY"
+            android:textSize="12dp" />
+
+        <hello.dcsms.plak.widget.CustomButton
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/apply_mihome_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/putiah"
+            android:text="APPLY"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

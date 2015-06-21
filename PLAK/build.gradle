@@ -1,0 +1,200 @@
+apply plugin: 'com.android.application'
+import java.util.regex.Pattern
+
+
+def kodeversi() {
+    return 23
+}
+
+def kodeversinama() {
+    def xx = Integer.toString(kodeversi())
+    def minor = xx.substring(xx.size() - 1, xx.size());
+    def major = xx.substring(xx.size() - 2, xx.size() - 1);
+    return major + "." + minor
+
+}
+
+version = kodeversinama()
+
+task backupSourceCode(type: Zip) {
+    from 'src'
+    baseName = 'backup_src'
+    destinationDir = file('backup_source')
+
+}
+
+task hellolog << {
+    gantianu(cekchangelog())
+}
+
+def gantianu(sesuatu) {
+    def mstring = file("src/main/res/values/strings.xml")
+    def baca = mstring.getText()
+    def ptrn = Pattern.compile("(?s)<string name=\"changelog\">(.+?)</string>")
+    def m = ptrn.matcher(baca)
+    if (m.find()) {
+        def pangkas = m.replaceAll("<string name=\"changelog\">" + sesuatu + "</string>")
+        mstring.write(pangkas)
+        println("update changelog complete")
+    }
+}
+
+def cekchangelog() {
+    def versi = Integer.toString(kodeversi())
+    def patt = Pattern.compile("(?s)" + versi + "\\/\\*\\*(.+?)\\*\\/")
+    def file = file("changelog").getText()
+    def matcher = patt.matcher(file)
+    if (matcher.find()) {
+        def result = matcher.group(0)
+        def res = result.replaceAll(versi + "\\/\\*\\*", "")
+        def res2 = res.replaceAll("\\*\\/", "")
+        return res2.trim()
+    } else {
+        return null
+    }
+}
+
+task('kodeversi') << {
+    cekchangelog()
+    //kode
+    def kodeVersi = file("src/main/res/values/integers.xml")
+    def pattern = Pattern.compile("<integer.+\"kodeversi\">(.+)</.+>")
+    def txt = kodeVersi.getText()
+    def matcher = pattern.matcher(txt)
+    matcher.find()
+    def versikontent = matcher.replaceAll("<integer name=\"kodeversi\">" + kodeversi() + "</integer>")
+    kodeVersi.write(versikontent)
+    //string
+    def versi = file("src/main/res/values/strings.xml")
+    def patt = Pattern.compile("<string.+name=\"readable_versi.+string>")
+    def t = versi.getText()
+    def m = patt.matcher(t)
+    m.find()
+    def versirep = m.replaceAll("<string  translatable=\"false\" name=\"readable_versi\">" + kodeversinama() + "</string>")
+    versi.write(versirep)
+
+
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'generateReleaseBuildConfig') {
+        task.dependsOn 'backupSourceCode'
+    }
+    if (task.name == 'generateReleaseBuildConfig' || task.name == 'generateDebugBuildConfig') {
+        task.dependsOn 'kodeversi'
+    }
+}
+
+
+if (project.hasProperty("dcsms.properties")
+        && new File(project.property("dcsms.properties")).exists()) {
+
+    Properties props = new Properties()
+    props.load(new FileInputStream(file(project.property("dcsms.properties"))))
+
+    android {
+        compileSdkVersion 'android-MNC'
+        buildToolsVersion "23.0.0 rc2"
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+            disable 'InvalidPackage'
+        }
+        packagingOptions {
+            exclude 'META-INF/services/javax.annotation.processing.Processor'
+        }
+
+
+
+        applicationVariants.all { variant ->
+
+
+            variant.outputs.each { output ->
+                println("YYY" + output.outputFile.parent)
+                println("XXX" + output.outputFile.name)
+                output.outputFile = new File(
+                        output.outputFile.parent,
+                        output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
+
+            }
+        }
+
+        defaultConfig {
+
+            applicationId "hello.dcsms.plak"
+            minSdkVersion 16
+            targetSdkVersion 'MNC'
+            versionName kodeversinama()
+            versionCode kodeversi()
+            useJack true
+
+//            ndk {
+//                moduleName "bitmaputils"
+//                abiFilters "armeabi", "armeabi-v7a"
+//            }
+
+
+        }
+
+        dexOptions {
+            incremental false
+            preDexLibraries = false
+            jumboMode = false
+            javaMaxHeapSize "700M"
+        }
+        signingConfigs {
+            release {
+                keyAlias 'dcsms'
+                keyPassword props['keystore.password']
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+            }
+            debug {
+                keyAlias 'dcsms'
+                keyPassword props['keystore.password']
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+            }
+        }
+
+        buildTypes {
+            debug {
+
+/*                minifyEnabled true
+                zipAlignEnabled true
+                shrinkResources true
+                proguardFile 'proguard-rules.txt'*/
+
+
+            }
+            release {
+
+                minifyEnabled true
+                zipAlignEnabled true
+                shrinkResources true
+                proguardFile 'proguard-rules.txt'
+
+
+            }
+        }
+    }
+
+
+    dependencies {
+//    compile ('com.facebook.android:facebook-android-sdk:4.1.0'){
+//        exclude module: 'support-v4'
+//    }
+        compile fileTree(include: ['*.jar'], dir: 'libs', exclude: 'android-support-v13')
+        provided fileTree(include: ['*.jar'], dir: 'libref')
+        compile('com.android.support:support-v13:22.1.1') {
+            // exclude module: 'android-v4'
+        }
+//        compile ('com.android.support:recyclerview-v7:21.+')
+//        compile 'com.android.support:cardview-v7:21.+'
+//        compile 'com.android.support:appcompat-v7:21.+'
+        //compile 'com.google.android.gms:play-services:7.0.0'
+
+
+    }
+}

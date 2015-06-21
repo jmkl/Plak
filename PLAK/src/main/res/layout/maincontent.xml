@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hello.dcsms.plak.widget.AwesomeFrameLayout
+
+    android:background="@color/merah"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/mainconten_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/glob_txt_version_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/dimen10"
+                android:gravity="right"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30"
+                android:text="@string/versi"
+
+                android:textAppearance="@style/txtKecil.Putiah"
+                android:textSize="@dimen/dimen10" />
+
+            <LinearLayout
+                android:id="@+id/glob_layout_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:background="@color/putiah"
+                android:paddingBottom="@dimen/dimen0"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen30"
+                    android:text="Hello"
+                    android:textAppearance="@style/txtKecil.Putiah"
+                    android:textColor="@color/merah"
+                    android:textSize="@dimen/dimen50" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/glob_txt_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/glob_layout_hello"
+                android:layout_marginTop="@dimen/dimen5"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30"
+                android:text="@string/hotseat_sum_off"
+                android:textAppearance="@style/txtKecil.Putiah"
+                android:textSize="@dimen/dimen10" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/glob_menu_sett"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/globalmenu_settings"
+                android:tag="Settings"
+                android:transitionName="@string/transition_menu" />
+
+            <ImageView
+                android:id="@+id/glob_menu_layoutsett"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/globalmenu_layoutsettings"
+                android:tag="Statusbar layout Settings"
+                android:transitionName="@string/transition_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/glob_menu_help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/globalmenu_help"
+                android:tag="Help"
+                android:transitionName="@string/transition_menu" />
+
+            <ImageView
+                android:id="@+id/glob_menu_about"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/globalmenu_about"
+                android:tag="About"
+                android:transitionName="@string/transition_menu" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="wrap_content"
+        android:layout_gravity="top|right"
+        android:visibility="gone"
+        android:padding="@dimen/dimen20"
+        android:src="@drawable/plak_carrier"
+        android:layout_height="wrap_content" android:id="@+id/logotoes"/>
+</hello.dcsms.plak.widget.AwesomeFrameLayout>

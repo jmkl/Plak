@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/preview_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/preview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/preview_holder" />
+
+    <LinearLayout
+        android:visibility="gone"
+
+        android:id="@+id/preview_info"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/dimen10"
+        android:background="@color/black_translucent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/preview_info_text"
+            android:textAppearance="@style/txtKecil.Putiah"
+            android:text="Active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

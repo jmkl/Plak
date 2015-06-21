@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/dimen20"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/wheel1_title"
+        android:textAppearance="@style/txtBesar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <antistatic.spinnerwheel.WheelHorizontalView
+        android:id="@+id/whell1"
+        app:visibleItems="4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:text="@string/app_name"
+        android:id="@+id/wheel2_title"
+        android:textAppearance="@style/txtBesar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <antistatic.spinnerwheel.WheelHorizontalView
+        android:id="@+id/whell2"
+        app:visibleItems="4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</LinearLayout>

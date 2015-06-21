@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/plak_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/statusbarsimple"
+        android:background="#222222"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/host_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip" >
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/plak_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/plak_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam" />
+
+        <TextView
+            android:id="@+id/plak_notificon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NotifIcon" />
+
+        <TextView
+            android:id="@+id/plak_signal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignalIcon" />
+
+        <TextView
+            android:id="@+id/plak_batrai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baterai" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/statusbarsimple"
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:background="#222222"
+        android:gravity="center_vertical" >
+
+        <!-- 1.0.0.0 -->
+
+        <ImageView
+            android:id="@+id/battery_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <!-- 2.0.0.0 -->
+
+        <ImageView
+            android:id="@+id/battery_indicator_charging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right|center"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <!-- 3.0.0.0 -->
+
+        <RelativeLayout
+            android:id="@+id/icons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip" >
+
+            <!-- 3.1.0.0 -->
+
+            <TextView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="left|center"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:singleLine="true"
+                android:text="12:00PM"
+                android:textColor="@android:color/white" />
+
+            <!-- 3.2.0.0 -->
+
+            <LinearLayout
+                android:id="@+id/notification_icon_area"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/clock"
+                android:gravity="left|center" >
+
+                <!-- 3.2.1.0 -->
+
+                <LinearLayout
+                    android:id="@+id/notificationIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/stat_sys_data_bluetooth" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/stat_sys_missed_call" />
+                </LinearLayout>
+
+                <!-- 3.2.2.0 -->
+
+                <ImageView
+                    android:id="@+id/notification_more_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 3.3.0.0 -->
+
+            <LinearLayout
+                android:id="@+id/statusbar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center" >
+
+                <!-- 3.3.1.0 -->
+
+                <ImageView
+                    android:id="@+id/moreIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher"
+                    android:visibility="gone" />
+
+                <!-- 3.3.2.0 -->
+
+                <TextView
+                    android:id="@+id/network_speed_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="3.0dip"
+                    android:gravity="right|center"
+                    android:singleLine="true"
+                    android:text="200K/s"
+                    android:visibility="gone" />
+
+                <!-- 3.3.3.0 -->
+
+                <LinearLayout
+                    android:id="@+id/statusIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+                <!-- 3.3.4.0 -->
+
+                <LinearLayout
+                    android:id="@+id/signal_cluster_container"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical" >
+
+                    <!-- 3.3.5.0 -->
+
+                    <include
+                        android:id="@+id/signal_cluster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        layout="@layout/signal_cluster_view" />
+                    <!-- 3.3.6.0 -->
+
+                    <include
+                        android:id="@+id/signal_cluster2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        layout="@layout/signal_cluster_view"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- 3.4.0.0 -->
+
+                <ImageView
+                    android:id="@+id/battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/battery" />
+
+                <!-- 3.5.0.0 -->
+
+                <TextView
+                    android:id="@+id/battery_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:gravity="center"
+                    android:paddingBottom="0.30000007dip"
+                    android:text="20%"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

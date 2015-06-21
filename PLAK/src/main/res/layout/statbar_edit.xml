@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:paddingLeft="3dip"
+        android:paddingRight="3dip"
+        android:background="@color/merah"
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:id="@+id/ll_host" />
+
+    <View
+        android:visibility="visible"
+        android:id="@+id/hover_view"
+        android:layout_width="wrap_content"
+        android:layout_height="25dip"
+        android:background="@drawable/hoverview" />
+
+    <TextView
+        android:id="@+id/pos_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_host"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:text=""
+        android:textAppearance="@style/txtPrefBesar" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_below="@+id/ll_host"
+        android:id="@+id/statusbarsimple"
+        android:layout_width="match_parent"
+        android:layout_height="25dip"
+        android:background="#222222"
+        android:gravity="center_vertical" >
+
+        <!-- 1.0.0.0 -->
+
+        <ImageView
+            android:id="@+id/battery_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <!-- 2.0.0.0 -->
+
+        <ImageView
+            android:id="@+id/battery_indicator_charging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right|center"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <!-- 3.0.0.0 -->
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/icons"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip" >
+
+            <!-- 3.1.0.0 -->
+
+            <TextView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="left|center"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:singleLine="true"
+                android:text="12:00PM"
+                android:textColor="@android:color/white" />
+
+            <!-- 3.2.0.0 -->
+
+            <LinearLayout
+                android:id="@+id/notification_icon_area"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/clock"
+                android:gravity="left|center" >
+
+                <!-- 3.2.1.0 -->
+
+                <LinearLayout
+                    android:id="@+id/notificationIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sb_ic_bt" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sb_ic_dl" />
+                </LinearLayout>
+
+                <!-- 3.2.2.0 -->
+
+                <ImageView
+                    android:id="@+id/notification_more_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- 3.3.0.0 -->
+
+            <LinearLayout
+                android:id="@+id/statusbar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center" >
+
+                <!-- 3.3.1.0 -->
+
+                <ImageView
+                    android:id="@+id/moreIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_launcher"
+                    android:visibility="gone" />
+
+                <!-- 3.3.2.0 -->
+
+                <TextView
+                    android:id="@+id/network_speed_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="3.0dip"
+                    android:gravity="right|center"
+                    android:singleLine="true"
+                    android:textColor="@android:color/white"
+                    android:text="200K/s" />
+
+                <!-- 3.3.3.0 -->
+
+                <LinearLayout
+                    android:id="@+id/statusIcons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/sb_ic_alarm" />
+                </LinearLayout>
+                <!-- 3.3.4.0 -->
+
+                <LinearLayout
+                    android:id="@+id/signal_cluster_container"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical" >
+
+                    <!-- 3.3.5.0 -->
+
+                    <include
+                        android:id="@+id/signal_cluster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        layout="@layout/signal_cluster_view" />
+                    <!-- 3.3.6.0 -->
+
+                    <include
+                        android:id="@+id/signal_cluster2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        layout="@layout/signal_cluster_view"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!-- 3.4.0.0 -->
+
+                <ImageView
+                    android:id="@+id/battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sb_ic_batt" />
+
+                <!-- 3.5.0.0 -->
+
+                <TextView
+                    android:id="@+id/battery_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:gravity="center"
+                    android:paddingBottom="0.30000007dip"
+                    android:text="20%"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:textColor="#ff222222"
+        android:background="@drawable/circlebutton"
+        android:id="@+id/tblApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pos_info"
+        android:layout_centerHorizontal="true"
+        android:text="Apply"
+        android:textAllCaps="true" />
+
+    <LinearLayout
+        android:id="@+id/v_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statusbarsimple"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:padding="20dip" >
+
+        <TextView
+            android:id="@+id/v_jam"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+
+        <TextView
+            android:id="@+id/v_icon"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+
+        <TextView
+            android:id="@+id/v_sinyal"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+
+        <TextView
+            android:id="@+id/v_batrai"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+
+        <TextView
+            android:id="@+id/v_trafik"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/v_staticon"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:background="@drawable/drawabletes"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen20" />
+    </LinearLayout>
+
+</RelativeLayout>

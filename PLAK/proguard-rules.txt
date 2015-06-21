@@ -1,0 +1,65 @@
+
+-optimizationpasses 5
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+-dontwarn android.support.v4.**
+-dontwarn android.support.v7.**
+-dontwarn android.widget.PopupMenu
+-keep public class com.android.internal.view.menu.**{*;}
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class hello.dcsms.plak.ModPantek
+#-keep public class hello.dcsms.plak.ModStatusbar
+#-keep public class hello.dcsms.plak.ModMihome
+-keep public class hello.dcsms.plak.widget.PlakConf
+
+#gson data model
+-keep class hello.dcsms.plak.manual.AutoCompleteData {*;}
+-keep class hello.dcsms.plak.manual.AllListManResItems {*;}
+-keep class hello.dcsms.plak.manual.ListManResItem {*;}
+-keep class hello.dcsms.plak.manual.ManPackageName {*;}
+-keep class hello.dcsms.plak.manual.ManResItem {*;}
+-keep class hello.dcsms.plak.manual.ManualItemData {*;}
+-keep class hello.dcsms.plak.ss.** {*;}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+##---------------Begin: proguard configuration for Gson  ----------
+# Gson uses generic type information stored in a class file when working with fields. Proguard
+# removes such information by default, so configure it to keep all of it.
+-keepattributes Signature
+
+# Gson specific classes
+-keep class sun.misc.Unsafe { *; }
+#-keep class com.google.gson.stream.** { *; }
+
+# Application classes that will be serialized/deserialized over Gson
+# -keep class mypersonalclass.data.model.** { *; }
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+#admob
+-keep public class com.google.android.gms.ads.** {
+   public *;
+}
+
+-keep public class com.google.ads.** {
+   public *;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<hello.dcsms.plak.widget.FontAwesomeTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:plak="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tombolpintas_1"
+    android:padding="2dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kotakrounded"
+    android:gravity="center"
+    style="@style/txtBesar.Putiah"
+    plak:font="fontawesome.otf"
+    android:text="&#xf011;" />
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="mihome_col_num_valentry">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="mihome_col_num_val">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="mihome_icon_size_val">
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="mihome_icon_size_ent">
+        <item>40.0dip</item>
+        <item>50.0dip</item>
+        <item>60.dip</item>
+        <item>70.dip</item>
+        <item>80.dip</item>
+        <item>90.dip</item>
+    </string-array>
+    <string-array name="mihome_icon_text_size_ent">
+        <item>6dip</item>
+        <item>7dip</item>
+        <item>8dip</item>
+        <item>9dip</item>
+        <item>10dip</item>
+        <item>11dip</item>
+        <item>12dip</item>
+    </string-array>
+    <string-array name="mihome_icon_text_size_val">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="wifi_order_entry">
+        <item>Left</item>
+        <item>Right</item>
+    </string-array>
+    <string-array name="wifi_order_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="nama_paket">
+        <item>com.miui.home</item>
+        <item>com.android.systemui</item>
+    </string-array>
+
+    <string-array name="intent_share_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="intent_share">
+        <item>Share Dialog</item>
+        <item>Open with</item>
+    </string-array>
+
+</resources>

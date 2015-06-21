@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/item_template_delete" android:title="Delete"/>
+    <item android:id="@+id/item_template_wallp" android:title="Wallpaper"/>
+    <item android:id="@+id/item_template_apply" android:title="Apply"/>
+</menu>

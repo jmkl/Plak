@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hello.dcsms.plak.Hello" >
+
+    <item
+        android:icon="@drawable/apply"
+        android:id="@+id/menu_action_apply"
+        android:orderInCategory="100"
+        android:title="Apply"
+        android:showAsAction="always">
+    </item>
+
+</menu>

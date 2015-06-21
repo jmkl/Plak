@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WPrefs">
+        <attr name="nilaiMin1" format="integer"/>
+        <attr name="nilaiMax1" format="integer"/>
+        <attr name="nilaiMin2" format="integer"/>
+        <attr name="nilaiMax2" format="integer"/>
+
+        <attr name="key_1" format="string|reference"/>
+        <attr name="key_2" format="string|reference"/>
+        <attr name="title_1" format="string|reference"/>
+        <attr name="title_2" format="string|reference"/>
+        <attr name="default_value_1" format="string|reference"/>
+        <attr name="default_value_2" format="string|reference"/>
+
+        <attr name="single" format="boolean"/>
+    </declare-styleable>
+</resources>

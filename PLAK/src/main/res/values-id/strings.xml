@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="desc_pendek">WSM modul untuk Mihome n MIUI V6 Statusbar</string>
+	<string name="desc_panjang">WSM modul untuk Mihome n MIUI V6 Statusbar</string>
+	<string name="pref_ic_count_horizontal">Horisontal ikon Count</string>
+	<string name="pref_ic_count_vert">Vertikal ikon Count</string>
+	<string name="pref_ic_shadow">Shadow ikon</string>
+	<string name="pref_ic_size">Ukuran ikon</string>
+	<string name="pref_ic_text">Teks icon</string>
+	<string name="pref_ic_text_size">Ikon ukuran teks</string>
+	<string name="pref_sb_layout">Modifikasi statusbar Layout</string>
+	<string name="pref_ic_shadow_sum_show">Tampilkan ikon bayangan</string>
+	<string name="pref_ic_shadow_sum_hide">Menyembunyikan ikon bayangan</string>
+	<string name="pref_ic_text_sum_show">Tampilkan ikon teks</string>
+	<string name="pref_ic_text_sum_hide">Menyembunyikan ikon teks</string>
+	<string name="pref_sb_mod_active">Statusbar tata letak Mod adalah Aktifkan</string>
+	<string name="pref_sb_mod_inactive">Statusbar tata letak Mod adalah Inactive</string>
+	<string name="nav_menu_setting">PENGATURAN UMUM</string>
+	<string name="nav_menu_sb">PENGATURAN TATA-LETAK STATUSBAR</string>
+	<string name="nav_menu_help">TENTANG</string>
+	<string name="nav_menu_log">DAPATKAN LOGCAT</string>
+	<string name="ket_sb_layout">\'saved in\' EEEE, MMM dd yyyy \'at\' hh: mm</string>
+	<string name="header_info">Bagi mereka yang percaya keangkeran terbatas &amp; setiap elemen individu semesta melibatkan di atasnya</string>
+	<string name="show_hide_hotseat">Menampilkan atau menyembunyikan Hotseat</string>
+	<string name="hotseat_sum_on">HotSeat terlihat</string>
+	<string name="hotseat_sum_off">Hotseat bersembunyi di suatu tempat (pastikan untuk memindahkan semua ikon di hotseat ke ruang kerja sebelum beralih omong kosong ini)</string>
+	<string name="manual_conf">Mengaktifkan Manual Setting</string>
+	<string name="manual_config_setting">Pengaturan konfigurasi manual</string>
+	<string name="man_add_dimen">Tambahkan dimen</string>
+	<string name="man_add_string">Tambahkan String</string>
+	<string name="man_add_integer">Tambahkan bilangan bulat</string>
+	<string name="man_dial_title">Manual menambahkan judul</string>
+	<string name="man_add_item">Nama barang</string>
+	<string name="man_add_val">Nilai item</string>
+	<string name="man_add_apply">MENERAPKAN</string>
+	<string name="cm_edit">Mengedit</string>
+	<string name="cm_delete">Hapus</string>
+	<string name="man_add_desc">Deskripsi item</string>
+	<string name="man_add_bool">Menambahkan Boolean</string>
+	<string name="man_add_color">AddColor</string>
+	<string name="switch_batt_ic">Beralih baterai dan ikon Order LTR/RTL</string>
+	<string name="pref_switch_batt">Ikon baterai &amp; teks Order</string>
+	<string name="pref_sh_jam_str">Menampilkan atau menyembunyikan jam.</string>
+	<string name="pref_sh_sinyal_str">Menampilkan atau menyembunyikan ikon sinyal</string>
+	<string name="pref_sh_icnotif_str">Menampilkan atau menyembunyikan ikon pemberitahuan</string>
+	<string name="pref_sh_statusicon_str">Menampilkan atau menyembunyikan ikon status</string>
+	<string name="pref_sh_batt_str">Menampilkan atau menyembunyikan baterai</string>
+	<string name="str_clock_editor">Editor jam.</string>
+	<string name="clock_editor_sum">Anda dapat mengkonfigurasi format Clock statusbar Anda dengan itu</string>
+	<string name="enable_custom_jam">En (dis) dapat Custom jam format</string>
+	<string name="en_custom_clock_format">Dengan mengaktifkan pilihan ini, Anda harus gratis cara mengatur format jam Anda dasar pada Simpledateformat</string>
+	<string name="man_conf_sum">Sebelum mengaktifkan ini, silakan baca tentang bagian pada menu navigasi</string>
+
+	<string name="mod_mihome_enabler_sum">Mengaktifkan atau menonaktifkan mod mihome. reboot setelah perubahan terasa</string>
+	<string name="mod_sys_ui_sum">Mengaktifkan atau menonaktifkan SystemUI mod. Membutuhkan reboot</string>
+	<string name="root_info">Sepertinya u tidak memberikan atau memiliki izin akar. Kita perlu mengakses akar untuk menangkap beberapa log.</string>
+	<string name="pref_wifi_icon_title">Posisi ikon WiFi</string>
+
+</resources>

@@ -1,0 +1,33 @@
+import java.util.regex.Pattern
+
+import java.util.zip.ZipOutputStream
+import java.util.zip.ZipEntry
+import java.nio.channels.FileChannel
+
+String zipFileName = "file.zip"
+String inputDir = "logs"
+
+ZipOutputStream zipFile = new ZipOutputStream(new FileOutputStream(zipFileName))
+new File(inputDir).eachFile() { file ->
+    zipFile.putNextEntry(new ZipEntry(file.getName()))
+    def buffer = new byte[1024]
+    file.withInputStream { i ->
+        def l = i.read(buffer)
+        // check wether the file is empty
+        if (l > 0) {
+            zipFile.write(buffer, 0, l)
+        }
+    }
+    zipFile.closeEntry()
+}
+zipFile.close()
+def kodeversi(){
+    return 21;
+}
+def kodeversinama(){
+    def pattern = Pattern.compile("\\d")
+    def matcher = pattern.matcher(kodeversi())
+    matcher.find()
+
+    return matcher.group(1);
+}

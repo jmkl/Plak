@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55000000"
+    android:padding="32dp" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/contentDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/kotakmerah"
+        android:padding="24dp" >
+
+        <TextView
+            android:id="@+id/tv_man_dial_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man_dial_title"
+            android:textAppearance="@style/txtPrefBesar"
+            android:textColor="@color/putiah" />
+
+        <View
+            android:layout_marginBottom="25dip"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/putiah" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Package name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/putiah" />
+
+        <AutoCompleteTextView
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/putiah"
+            android:background="@color/merahtua"
+            android:padding="@dimen/dimen5"
+            android:id="@+id/man_pack_name" />
+
+        <TextView
+            android:id="@+id/tv_man_dial_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man_add_item"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/putiah" />
+
+        <AutoCompleteTextView
+            android:singleLine="true"
+            android:id="@+id/et_man_dial_add_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/merahtua"
+            android:ems="10"
+            android:padding="@dimen/dimen5"
+            android:textColor="@color/putiah" />
+
+        <TextView
+            android:id="@+id/tv_man_dial_add_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man_add_val"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/putiah" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+        <EditText
+            android:textColorHint="#55ffffff"
+            android:singleLine="true"
+            android:id="@+id/et_man_dial_add_val"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/merahtua"
+            android:ems="10"
+            android:padding="@dimen/dimen5"
+            android:textColor="@color/putiah" />
+            <View
+                android:visibility="gone"
+              android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/putiah"
+                android:id="@+id/man_dial_col_picker"
+                android:layout_width="20dp"
+                android:paddingRight="@dimen/dimen5"
+                android:layout_height="20dp"
+                 />
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_man_dial_add_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man_add_desc"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/putiah" />
+
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_man_dial_add_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/merahtua"
+            android:ems="10"
+            android:padding="@dimen/dimen5"
+            android:textColor="@color/putiah" />
+
+        <TextView
+            android:textColor="@color/color_state"
+            android:layout_marginTop="25dip"
+            android:layout_gravity="center"
+            android:id="@+id/tv_man_add_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/man_add_apply"
+            android:textAppearance="@style/txtPrefBesar" />
+    </LinearLayout>
+
+</LinearLayout>

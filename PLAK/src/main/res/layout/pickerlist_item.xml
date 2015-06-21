@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:plak="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dimen10"
+    android:background="@color/merah"
+    android:layout_height="match_parent" >
+
+    <hello.dcsms.plak.widget.FontAwesomeTextView
+        android:textColor="@color/putiah"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        plak:font="fontawesome.otf"
+        android:text="&#xf011;"
+        style="@style/txtBesar.Putiah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerlist_item_icon"
+        />
+
+    <TextView
+
+        android:textColor="@color/putiah"
+        android:singleLine="true"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/hello_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickerlist_item_teks"
+        android:textSize="@dimen/dimen18" />
+
+</LinearLayout>

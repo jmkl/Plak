@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <com.android.systemui.statusbar.SignalClusterView -->
+<LinearLayout
+    android:layout_height="25dip"
+    android:background="@color/merah"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/wifi_combo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:src="@drawable/stat_sys_wifi_signal_4"
+                android:id="@+id/wifi_signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/wifi_ap"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stat_sys_wifi_ap" />
+
+            <ImageView
+                android:layout_gravity="bottom|center"
+                android:id="@+id/wifi_inout"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <TextView
+            android:textColor="#ffffff"
+            android:text="WIFI Carrier"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:id="@+id/wifi_label"
+            android:paddingLeft="3.0dip"
+            android:paddingRight="3.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:maxEms="10"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/mobile_roam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/mobile_combo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:src="@drawable/stat_sys_signal_inout"
+                android:layout_gravity="bottom|left|center"
+                android:id="@+id/mobile_inout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/stat_sys_signal_5"
+                android:id="@+id/mobile_signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#ffffff"
+                android:text="SIM"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:id="@+id/carrier"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:layout_weight="1.0" />
+
+            <ImageView
+                android:src="@drawable/stat_sys_data_connected_4g"
+                android:id="@+id/mobile_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/airplane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/mobile_combo_cdma"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/mobile_inout_cdma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/mobile_signal_evdo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/mobile_type_evdo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/mobile_signal_cdma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/mobile_type_cdma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:id="@+id/carrier_cdma"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

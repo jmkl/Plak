@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?android:actionBarSize">
+
+    <LinearLayout
+        android:id="@+id/root_par_man"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/merah"
+        android:orientation="horizontal">
+
+        <hello.dcsms.plak.widget.HoriListMenu
+            android:id="@+id/man_conf_listmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <hello.dcsms.plak.widget.CustomButton
+            android:id="@+id/man_conf_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+
+            android:text="Save As"
+            android:textAllCaps="true"
+            android:textColor="@color/putiah"
+            android:textSize="12dp" />
+
+        <hello.dcsms.plak.widget.CustomButton
+            android:id="@+id/man_con_apply_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Apply Selected"
+            android:textAllCaps="true"
+            android:textColor="@color/putiah"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/manual_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sortirmenu"
+        android:layout_below="@+id/root_par_man"
+        android:background="@color/putiah" />
+
+    <hello.dcsms.plak.widget.HoriListMenu
+        android:id="@+id/sortirmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

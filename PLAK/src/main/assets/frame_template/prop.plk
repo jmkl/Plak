@@ -1,0 +1,27 @@
+{
+	"ssframe":"Sample_TES",
+	"ss_x":720,
+	"ss_y":1280,
+	"ssframedata": {
+		"pos_ss_x":395,
+		"pos_ss_y":359,
+		"frame":"myawesome_frame.png",
+		"frame_x":328,
+		"frame_y":148,
+	"overlay" : [
+		{
+			"overlay_img":"iptk.png",
+			"overlay_x":935,
+			"overlay_y":268
+		},
+		{
+			"overlay_img":"overlay.png",
+			"overlay_x":328,
+			"overlay_y":148
+		}
+	],
+	"background":"bg.jpg",
+	"bg_width":1500,
+	"bg_height":2000
+}
+}

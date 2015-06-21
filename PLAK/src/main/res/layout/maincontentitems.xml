@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:scaleType="matrix"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/mci_menuimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:padding="@dimen/dimen10"
+            android:gravity="center"
+            android:textAppearance="@style/txtBesar.Putiah"
+            android:text="@string/hello_world"
+            android:id="@+id/mci_menutxt"
+            android:background="@color/black_translucent"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</FrameLayout>

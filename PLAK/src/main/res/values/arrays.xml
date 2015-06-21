@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="action_list">
+        <item>Sort by name</item>
+        <item>Sort by package name</item>
+        <item>Sort by checked item</item>
+        <item>Sort by type</item>
+    </string-array>
+    <string-array name="xpanded_view_entryValues">
+        <item>battery_indicator</item>
+        <item>battery_indicator_charging</item>
+        <item>icons</item>
+        <item>clock</item>
+        <item>notification_icon_area</item>
+        <item>statusbar_icon</item>
+        <item>moreIcon</item>
+        <item>network_speed_view</item>
+        <item>statusIcons</item>
+        <item>signal_cluster_container</item>
+        <item>battery</item>
+        <item>battery_num</item>
+    </string-array>
+    <string-array name="xpanded_view_entries" >
+        <item>Battery indicator</item>
+        <item>Battery indicator charging</item>
+        <item>Icons</item>
+        <item>Clock</item>
+        <item>Notification icon area</item>
+        <item>Statusbar icon</item>
+        <item>More icon</item>
+        <item>Network speed view</item>
+        <item>Status icons</item>
+        <item>Signal cluster container</item>
+        <item>Battery</item>
+        <item>Battery num</item>
+        </string-array>
+</resources>

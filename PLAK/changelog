@@ -1,0 +1,30 @@
+22/**
+"
+ Current Version : %d
+    Changelog :
+        [1]: Fix statusbar bugs per MIUI OTA Update 5.5.22
+
+"
+*/
+21/**
+"
+ Current Version : %d
+    Changelog :
+        [1]: Add custom carrier image option dark and light mode on both SIM1 and SIM2
+        [2]: Add option for screenshot notification behaviour (Open/Share screenshot)
+        [3]: Fix Screenshots sometimes doesn't work
+        [4]: Several menu option on screenshot template section (preview will update runtime)
+        [5]: You can open template file from your favourite file explorer. choose open with Plak. and it will install it automatically
+        [6]: Retry fixing notification icon stuff (such as pain in the arsh)
+        [7]: Fix wsm config got messed up after updating PLAK!
+"
+*/
+20/**
+"
+ Current Version : %d
+    Changelog :
+        [1]: Fix notification bound
+        [2]: Add new screenshot mockup properties
+        [3]: Add option for Original screenshots notification
+"
+*/
