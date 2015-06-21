@@ -41,7 +41,6 @@ testing/
 captures/
 gradle/
 jni/
-hello/
 *.jsx
 *.jsxbin
 *.cfg
