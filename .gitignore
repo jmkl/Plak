@@ -28,7 +28,6 @@ proguard/
 
 /*/frame_template
 /*/jni
-/*/libref
 /*/__pycache__
 /*/backup_source
 /*/*.py
@@ -39,7 +38,6 @@ MyApplication/
 release/
 testing/
 captures/
-gradle/
 jni/
 *.jsx
 *.jsxbin
